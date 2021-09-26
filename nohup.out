@@ -1,0 +1,390 @@
+[I 2021-09-24 20:36:38.570 ServerApp] jupyterlab | extension was successfully linked.
+[I 2021-09-24 20:36:38.598 LabApp] JupyterLab extension loaded from /home/andrew/.local/lib/python3.8/site-packages/jupyterlab
+[I 2021-09-24 20:36:38.598 LabApp] JupyterLab application directory is /home/andrew/.local/share/jupyter/lab
+[I 2021-09-24 20:36:38.602 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2021-09-24 20:36:38.603 ServerApp] Serving notebooks from local directory: /home/andrew/Desktop/CS330/hw0
+[I 2021-09-24 20:36:38.603 ServerApp] Jupyter Server 1.11.0 is running at:
+[I 2021-09-24 20:36:38.603 ServerApp] http://localhost:8888/lab?token=bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620
+[I 2021-09-24 20:36:38.603 ServerApp]  or http://127.0.0.1:8888/lab?token=bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620
+[I 2021-09-24 20:36:38.603 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2021-09-24 20:36:38.647 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/andrew/.local/share/jupyter/runtime/jpserver-208240-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620
+     or http://127.0.0.1:8888/lab?token=bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620
+[W 2021-09-24 20:36:40.975 ServerApp] 404 GET /api/kernels/6e223be7-a769-4cc3-89c3-9d2ae34e1f8f/channels?session_id=a738be52-6179-476c-92ab-9f16f3f04bde (127.0.0.1): Kernel does not exist: 6e223be7-a769-4cc3-89c3-9d2ae34e1f8f
+[W 2021-09-24 20:36:40.988 ServerApp] 404 GET /api/kernels/6e223be7-a769-4cc3-89c3-9d2ae34e1f8f/channels?session_id=a738be52-6179-476c-92ab-9f16f3f04bde (127.0.0.1) 16.49ms referer=None
+[E 2021-09-24 20:36:42.539 ServerApp] Uncaught exception GET /api/nbconvert?1632530202466 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1632530202466', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/home/andrew/.local/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        from nbconvert.exporters import base
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 4, in <module>
+        from .slides import SlidesExporter
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/exporters/slides.py", line 12, in <module>
+        from ..preprocessors.base import Preprocessor
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/__init__.py", line 7, in <module>
+        from .csshtmlheader import CSSHTMLHeaderPreprocessor
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/csshtmlheader.py", line 14, in <module>
+        from jupyterlab_pygments import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/__init__.py", line 4, in <module>
+        from .style import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/style.py", line 10, in <module>
+        class JupyterStyle(Style):
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 101, in __new__
+        ndef[0] = colorformat(styledef)
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 58, in colorformat
+        assert False, "wrong color format %r" % text
+    AssertionError: wrong color format 'var(--jp-mirror-editor-variable-color)'
+[W 2021-09-24 20:36:42.543 ServerApp] Unhandled error
+[E 2021-09-24 20:36:42.543 ServerApp] {
+      "Host": "localhost:8888",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"",
+      "Authorization": "token bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620",
+      "X-Xsrftoken": "2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Content-Type": "application/json",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
+      "Sec-Ch-Ua-Platform": "\"Linux\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8888/lab/workspaces/auto-e?reset",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866; username-localhost-8888=\"2|1:0|10:1632530202|23:username-localhost-8888|44:ODBhN2Y4OTcyNDRiNDMxY2E1MDYxMDY1MjIwYTQ3YmQ=|a4e5572b339f44c27f529d3ab848224e5ae53ea39630f2b66fcf8d1ba32486cc\""
+    }
+[E 2021-09-24 20:36:42.543 ServerApp] 500 GET /api/nbconvert?1632530202466 (127.0.0.1) 34.96ms referer=http://localhost:8888/lab/workspaces/auto-e?reset
+[E 2021-09-24 20:36:42.550 ServerApp] Uncaught exception GET /api/nbconvert?1632530202468 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1632530202468', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/home/andrew/.local/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        from nbconvert.exporters import base
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/__init__.py", line 6, in <module>
+        from . import preprocessors
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/__init__.py", line 7, in <module>
+        from .csshtmlheader import CSSHTMLHeaderPreprocessor
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/csshtmlheader.py", line 14, in <module>
+        from jupyterlab_pygments import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/__init__.py", line 4, in <module>
+        from .style import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/style.py", line 10, in <module>
+        class JupyterStyle(Style):
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 101, in __new__
+        ndef[0] = colorformat(styledef)
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 58, in colorformat
+        assert False, "wrong color format %r" % text
+    AssertionError: wrong color format 'var(--jp-mirror-editor-variable-color)'
+[W 2021-09-24 20:36:42.550 ServerApp] Unhandled error
+[E 2021-09-24 20:36:42.550 ServerApp] {
+      "Host": "localhost:8888",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"",
+      "Authorization": "token bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620",
+      "X-Xsrftoken": "2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Content-Type": "application/json",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
+      "Sec-Ch-Ua-Platform": "\"Linux\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8888/lab/workspaces/auto-e?reset",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866; username-localhost-8888=\"2|1:0|10:1632530202|23:username-localhost-8888|44:ODBhN2Y4OTcyNDRiNDMxY2E1MDYxMDY1MjIwYTQ3YmQ=|a4e5572b339f44c27f529d3ab848224e5ae53ea39630f2b66fcf8d1ba32486cc\""
+    }
+[E 2021-09-24 20:36:42.550 ServerApp] 500 GET /api/nbconvert?1632530202468 (127.0.0.1) 41.50ms referer=http://localhost:8888/lab/workspaces/auto-e?reset
+[W 2021-09-24 20:36:42.731 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2021-09-24 20:36:42.751 ServerApp] Replacing stale connection: 6e223be7-a769-4cc3-89c3-9d2ae34e1f8f:a738be52-6179-476c-92ab-9f16f3f04bde
+[I 2021-09-24 20:36:51.735 ServerApp] Saving file at /models.py
+[I 2021-09-24 20:36:53.169 ServerApp] Saving file at /models.py
+[E 2021-09-24 20:36:56.583 ServerApp] Uncaught exception GET /api/nbconvert?1632530216577 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1632530216577', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/home/andrew/.local/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        from nbconvert.exporters import base
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/__init__.py", line 6, in <module>
+        from . import preprocessors
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/__init__.py", line 7, in <module>
+        from .csshtmlheader import CSSHTMLHeaderPreprocessor
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/csshtmlheader.py", line 14, in <module>
+        from jupyterlab_pygments import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/__init__.py", line 4, in <module>
+        from .style import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/style.py", line 10, in <module>
+        class JupyterStyle(Style):
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 101, in __new__
+        ndef[0] = colorformat(styledef)
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 58, in colorformat
+        assert False, "wrong color format %r" % text
+    AssertionError: wrong color format 'var(--jp-mirror-editor-variable-color)'
+[W 2021-09-24 20:36:56.583 ServerApp] Unhandled error
+[E 2021-09-24 20:36:56.584 ServerApp] {
+      "Host": "localhost:8888",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"",
+      "Authorization": "token bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620",
+      "X-Xsrftoken": "2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Content-Type": "application/json",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
+      "Sec-Ch-Ua-Platform": "\"Linux\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8888/lab/tree/models.py",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866; username-localhost-8888=\"2|1:0|10:1632530216|23:username-localhost-8888|44:NGRjOTIxYWE2MTYxNDc2OGFkZThkYzAzMzMwMGYyMDk=|fe9d0b51013794f4841d57412d93f052cde7cda659c5ce0d3f94c98754673152\""
+    }
+[E 2021-09-24 20:36:56.584 ServerApp] 500 GET /api/nbconvert?1632530216577 (127.0.0.1) 2.52ms referer=http://localhost:8888/lab/tree/models.py
+[E 2021-09-24 20:36:56.585 ServerApp] Uncaught exception GET /api/nbconvert?1632530216579 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1632530216579', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/home/andrew/.local/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyter_server/services/nbconvert/handlers.py", line 17, in get
+        from nbconvert.exporters import base
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/__init__.py", line 6, in <module>
+        from . import preprocessors
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/__init__.py", line 7, in <module>
+        from .csshtmlheader import CSSHTMLHeaderPreprocessor
+      File "/home/andrew/.local/lib/python3.8/site-packages/nbconvert/preprocessors/csshtmlheader.py", line 14, in <module>
+        from jupyterlab_pygments import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/__init__.py", line 4, in <module>
+        from .style import JupyterStyle
+      File "/home/andrew/.local/lib/python3.8/site-packages/jupyterlab_pygments/style.py", line 10, in <module>
+        class JupyterStyle(Style):
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 101, in __new__
+        ndef[0] = colorformat(styledef)
+      File "/usr/lib/python3/dist-packages/pygments/style.py", line 58, in colorformat
+        assert False, "wrong color format %r" % text
+    AssertionError: wrong color format 'var(--jp-mirror-editor-variable-color)'
+[W 2021-09-24 20:36:56.585 ServerApp] Unhandled error
+[E 2021-09-24 20:36:56.585 ServerApp] {
+      "Host": "localhost:8888",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"",
+      "Authorization": "token bc1b92b44c8ab1e14704f4d9c057e98b4408082626ebd620",
+      "X-Xsrftoken": "2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Content-Type": "application/json",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
+      "Sec-Ch-Ua-Platform": "\"Linux\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8888/lab/tree/models.py",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Cookie": "_xsrf=2|cee2807b|b66edf86997f4a6b8bf1a90167bb4430|1631034866; username-localhost-8888=\"2|1:0|10:1632530216|23:username-localhost-8888|44:NGRjOTIxYWE2MTYxNDc2OGFkZThkYzAzMzMwMGYyMDk=|fe9d0b51013794f4841d57412d93f052cde7cda659c5ce0d3f94c98754673152\""
+    }
+[E 2021-09-24 20:36:56.585 ServerApp] 500 GET /api/nbconvert?1632530216579 (127.0.0.1) 3.74ms referer=http://localhost:8888/lab/tree/models.py
+[W 2021-09-24 20:36:56.861 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2021-09-24 20:36:56.917 ServerApp] Notebook CS330 - Homework 0.ipynb is not trusted
+[I 2021-09-24 20:36:57.162 ServerApp] Kernel started: 6c670033-c530-43a0-8e47-7c81ebe82c74
+[I 2021-09-24 20:36:57.564 ServerApp] Starting buffering for 6c670033-c530-43a0-8e47-7c81ebe82c74:c914fd84-16e4-445a-afaf-f8db9002bdb7
+[I 2021-09-24 20:52:57.073 ServerApp] Saving file at /models.py
+[I 2021-09-24 20:54:57.091 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:02:57.177 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:10:57.202 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:14:57.229 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:16:43.347 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:16:45.283 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:18:41.592 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:19:43.143 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:20:10.824 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:20:18.089 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:20:34.807 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:20:44.508 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:21:18.601 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:21:43.788 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:22:02.011 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:22:19.206 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:22:24.089 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:22:35.026 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:34:35.059 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:34:40.537 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:37:25.231 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:37:41.048 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:38:51.534 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:39:28.776 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:39:32.562 ServerApp] Saving file at /models.py
+[I 2021-09-24 21:41:32.732 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:12:30.732 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:14:19.092 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:15:16.498 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:17:16.518 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:17:23.171 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:17:59.057 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:18:24.549 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:18:27.210 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:18:28.525 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:18:49.548 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:19:01.519 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:19:13.836 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:19:56.002 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:20:14.002 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:20:36.701 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:20:44.540 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:20:49.686 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:22:26.092 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:22:42.178 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:23:00.955 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:33:03.733 ServerApp] Saving file at /models.py
+[I 2021-09-24 22:37:01.325 ServerApp] Saving file at /models.py
+[I 2021-09-24 23:07:23.625 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 00:17:26.612 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 00:17:34.064 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 00:17:57.416 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 00:18:39.661 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 00:18:41.412 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:18:57.509 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:20:29.368 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:20:43.335 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:24:05.593 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:27:50.011 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:29:04.280 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:29:25.920 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:31:11.741 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:31:19.266 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:31:26.239 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:31:43.575 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:31:54.129 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:33:08.851 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:34:00.067 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:34:01.433 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:34:03.494 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:37:10.985 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:37:18.081 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:37:25.570 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:37:31.621 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:40:45.027 ServerApp] Saving file at /models.py
+[I 2021-09-25 00:59:58.320 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:00:25.011 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:03:23.457 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:07:22.493 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:07:23.726 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:08:16.359 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:09:39.650 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:09:55.487 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:10:51.788 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:11:00.364 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:12:50.194 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:14:09.859 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:14:20.482 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:15:12.606 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:15:21.738 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:15:25.384 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:15:36.893 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:16:07.052 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:16:40.596 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:16:41.620 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:27:21.335 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:27:27.267 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:27:51.187 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:27:58.837 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:13.949 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:19.453 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:28.843 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:34.397 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:37.507 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:44.761 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:28:47.523 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:29:10.734 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:29:32.401 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:29:46.522 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:29:56.696 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:30:01.327 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:30:08.836 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:30:32.156 ServerApp] Saving file at /models.py
+[I 2021-09-25 01:43:07.515 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:43:12.140 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:43:27.760 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:43:44.989 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:43:55.895 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:44:10.995 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:44:16.449 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:44:22.675 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:44:24.508 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:44:27.494 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:13.866 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:15.584 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:25.673 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:38.119 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:46.568 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:55.934 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:46:59.727 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:47:10.125 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:47:14.973 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 01:47:16.054 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 02:04:04.795 ServerApp] Saving file at /multitask.py
+[I 2021-09-25 02:04:23.261 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:04:30.265 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:04:44.851 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:04:47.322 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:04:52.574 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:04:54.655 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:05:01.944 ServerApp] Saving file at /main.py
+[I 2021-09-25 02:07:10.437 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:07:18.692 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:07:40.694 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:08:12.995 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:08:15.319 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:08:28.840 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:08:34.059 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:09:12.736 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:09:14.172 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:09:22.696 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:09:53.058 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:09:54.462 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:10:06.021 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:10:21.725 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:11:22.649 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:11:30.462 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:11:53.294 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:11:56.036 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:12:03.074 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:12:06.088 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:13:38.140 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:13:43.689 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:14:12.269 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:16:38.662 ServerApp] Saving file at /models.py
+[I 2021-09-25 02:16:49.077 ServerApp] Saving file at /models.py
+[I 2021-09-25 12:44:09.512 ServerApp] Saving file at /models.py
+[I 2021-09-25 12:58:39.528 ServerApp] Saving file at /main.py
+[I 2021-09-25 16:59:24.739 ServerApp] Saving file at /models.py
+[I 2021-09-25 16:59:33.454 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:01:33.728 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:02:04.686 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:03:15.856 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:03:47.211 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:04:55.445 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:05:03.403 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:05:09.839 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:05:25.657 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:05:30.638 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:06:15.160 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:07:21.978 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:07:54.031 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:12:55.383 ServerApp] Saving file at /models.py
+[I 2021-09-25 17:19:52.182 ServerApp] Saving file at /main.py
+[I 2021-09-25 20:48:28.878 ServerApp] Saving file at /models.py
+[I 2021-09-25 22:07:49.821 ServerApp] Starting buffering for 6c670033-c530-43a0-8e47-7c81ebe82c74:d23e64dd-ceb2-47c4-b13b-e8a9d12f17b6
+[W 2021-09-25 22:10:23.790 LabApp] Could not determine jupyterlab build status without nodejs
