@@ -1,8 +1,18 @@
 \documentclass[]{article}
-
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{/home/andrew/Desktop/CS330/hw0/multitask-recsys/images/}}
 %opening
-\title{CS 330: Homework 0}
-\author{Minh Tran}
+\title{\textbf{CS 330 Autumn 2021/2022 Homework 0}
+	{Multitask Training for Recommender Systems
+		Due Monday September 27, 11:59 PM PST}}
+
+\author{
+			\\SUNetID: tminh 
+			\\Name: Minh Tran 
+			\\Collaborators: N/A 
+		}
+
 
 \begin{document}
 	
@@ -10,62 +20,26 @@
 	
 	\begin{abstract}
 		
-		Using complicated object detection models gives real-time processing speed and considerate performance compare to human operator for CCTV camera. However, sometimes simple image processing algorithm can already track down the scene change in CCTV camera and display these changes. This report demonstrates that adding a background subtraction pre-process step to zoom into the region of interest can improve the visualization of scene changes for human operator. In the later part, we will explore how this method will also increase the performance of detection models on CCTV camera.
+		The document contains solutions for given problems including implementation of a multi-task model which predicts user-movie interactions and the potential score an user will rate a particular movie and demonstration of experiments with different settings to evaluate the effect of embedding sharing to the training performance of multi-task model.
 		
 	\end{abstract}
 	
-	\section{Problem Description}
-	Suppose that you're in charge of implement an image processing functions to track the pixel different between two consecutive images and then zoom in the region of interest of the image where there is highest difference. You will be provided helper functions to read a stream of video, to de-noise an image, and to feed an image into an object detection model. You will be asked to implement the function to compare pixel to pixel of each image, and the function to zoom in the largest pixel blobs. You do not need to know anything about object detection algorithms, but if you want to, you can read the Appendix A.
+	\section{Problem 1: Implement Multi-Task Model}
+	Implementation of multi-task more will require embedding vectors of users and items, as well as the embedding vector of biases. For sharing embedding, we will use the same embedding vectors to do two calculations in forward function, first is the interaction probability for an user and a movie, second is the score that the user would assign to a movie. For separated embedding, we need to create another set of embedding vectors for users, items, biases and use this set for either task.
+	Details will be found in "models.py".	
 	
-	\textbf{Pipeline Diagram:} \par
+	\section{Problem 2: Debug Model Training}
+	The bug is the positions of "predictions" and "score" variables. 
+	Details will be found in "multitask.py".
 	
-	+ streamImage (provided) \par
-	+ denoise \par
-	+ subtract n filter \par
-	+ zoomin \par
-	+ sendImage(provided) \par
+	\section{Experiments Write-up}
 	
-	\makebox{content} \makebox{random}
-	
-	
-	\textbf{Helper functions:} \par
-	+ void streamVideo(string videoPath) \par
-	+ void sendImage(string image) \\
-	
-	\textbf{Needed functions:} \par
-	+ Grid<int> denoiseImage(Grid<int> inputImage) \par
-	+ Grid<int> compareImage(Grid<int> prev, Grid curr) \par
-	+ Grid<int> zoomIn(Grid<int> difference) \par
-	
-	\section{Solutions and Test Cases}
-	+ Solution 1: \\
-	+ Solution 2: \par
-	
-	\section{Problem Motivation}
-	+ Concept coverage \\
-	+ Personal significance \par
-	
-	\section{Concept Mastery and Common Misconceptions}
-	+ Concept mastery \\
-	+ Misconception \par
-	
-	\section{Ethics Reflection}
-	+ My project \\
-	+ Article and Ethics Question \par
-	
-	\begin{thebibliography}{1}
-		\bibitem{latexcompanion} 
-		Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark Liao 
-		\textit{YOLOv4: Optimal Speed and Accuracy of Object Detection}. 
-		http://arxiv.org/abs/1207.0016.
-		
-		
-	\end{thebibliography}
-	
-	
-	
-	
-	\section{Appendix}
-	
+	\begin{center} 
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\linewidth]{cat}
+			\caption{A random cat}
+		\end{figure}	
+	\end{center}
 	
 \end{document}

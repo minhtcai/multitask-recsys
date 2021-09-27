@@ -217,8 +217,7 @@ class MultitaskModel(object):
             #******************* YOUR CODE HERE *********************
             #********************************************************
             
-            num_batch = 0
-            
+
             for (batch_user, 
                  batch_item, 
                  batch_ratings) in utils.minibatch([user_ids_tensor,
@@ -237,21 +236,17 @@ class MultitaskModel(object):
                 
                 epoch_factorization_loss.append(factorization_loss.item())
                 
-                regression_loss = self._regression_loss_func(batch_ratings, # score
+                regression_loss = self._regression_loss_func(batch_ratings, # score observed - predicted
                                                              score)
                 epoch_regression_loss.append(regression_loss.item())
 
                 loss = (self._factorization_weight * factorization_loss + 
                        self._regression_weight * regression_loss)
                 epoch_loss.append(loss.item())
-
-                loss.backward()
-                self._optimizer.step()
                 
-                # display training information
-                num_batch += 1
-                #print("Epoch number: {} - batch {}".format(epoch_num, num_batch))    
-
+                loss.backward()
+                self._optimizer.step()  
+                
             #********************************************************
             #********************************************************
             #********************************************************

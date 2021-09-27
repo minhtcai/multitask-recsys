@@ -100,7 +100,7 @@ class MultiTaskNet(nn.Module):
             nn.Linear(64, 1)
         ])
         
-        # implement separated embedding, we create another embedding vectors to use  
+        # implement separated embedding, we create another embedding vectors to use for another task 
         if embedding_sharing is False:
             self.user_embedding_prime = ScaledEmbedding(num_users, embedding_dim)
             self.item_embedding_prime = ScaledEmbedding(num_items, embedding_dim)
@@ -140,16 +140,16 @@ class MultiTaskNet(nn.Module):
         #********************************************************
         #******************* YOUR CODE HERE *********************
         #********************************************************
-        
+
         # matrix multiplication - probability that user would watch the movie
         # using batch for matrix multilication will extend another dimension, so we need to sum the columns dimension                
         if self.embedding_sharing is False:
             # for separated embedding, we use the "prime" embedding vectors for matrix factorization
-            predictions = ((self.item_embedding_prime(item_ids)) @ self.user_embedding_prime(user_ids).T).sum(dim=1, keepdim=True) 
+            predictions = ((self.item_embedding_prime(item_ids)) @ self.user_embedding_prime(user_ids).T).sum(dim=1, keepdim=False) 
             + self.user_bias_embedding_prime(user_ids) + self.item_bias_embedding_prime(item_ids)
         else:
             # for shared embedding, we use the same embedding vectors for both matrix factorization and regression
-            predictions = ((self.item_embedding(item_ids)) @ self.user_embedding(user_ids).T).sum(dim=1, keepdim=True) 
+            predictions = ((self.item_embedding(item_ids)) @ self.user_embedding(user_ids).T).sum(dim=1, keepdim=False) 
             + self.user_bias_embedding(user_ids) + self.item_bias_embedding(item_ids)
         
         # element wise multiplication - score that user would assign the movie
@@ -159,7 +159,9 @@ class MultiTaskNet(nn.Module):
         # feed input to the network
         for layer in self.layers:
             score = layer(score)
-        
+            
+        predictions = predictions.squeeze()
+        score = score.squeeze()
         #********************************************************
         #********************************************************
         #********************************************************
